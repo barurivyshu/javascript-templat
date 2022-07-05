@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title> For Loop Animals</title>
+        <styles></styles>
+    </head>
+
+    <body>
+        <div id="output_div"></div>
+        <script>
+            //Declare Variables
+            var outputHTML = "";
+            var animals = ["cat", "dog", "donkey","buffalo","Goat"];
+            var colour  = ["brown", "black", "white"];
+            var adjective = ["wild", "hairy","domesticated","crazy"];
+
+            //loop over our arrays and create our html string
+            outputHTML += "<table>";
+            for (var i = 0; i < animals.length; i++) {
+                    for(var j = 0; j < colour.length; j++) {
+                        outputHTML +="<tr>";
+                        for(var k = 0; k < adjective.length; k++) {
+                            outputHTML += "<td>" + adjective[k] + " " + colour[j] + animals[i] + "</td>";
+                        }   
+                outputHTML +="</tr>";
+            }
+        }
+            outputHTML += "</table>";
+            //output our html
+            document.getElementById("output_div").innerHTML = outputHTML;
+        </script>
+    </body>
+</html>
